@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Raw PDF extraction dumps
+public/presentation_assets/
+public/slides/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

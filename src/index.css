@@ -1,40 +1,77 @@
 @import "tailwindcss";
 
 @theme {
-  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif-display: 'DM Serif Display', Georgia, serif;
+  --font-serif-body: 'Libre Baskerville', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+
+  --color-ecopet-bg: #F5F0D6;
+  --color-ecopet-card: #FFFFFF;
+  --color-ecopet-card-tint: #FAF7EB;
+  --color-ecopet-forest: #215332;
+  --color-ecopet-forest-dark: #153822;
+  --color-ecopet-forest-light: #2c6e43;
+  --color-ecopet-sage: #C4D89D;
+  --color-ecopet-sage-muted: #B0C290;
+  --color-ecopet-olive: #89986D;
+  --color-ecopet-petrol: #304250;
+  --color-ecopet-blue: #1A456E;
+  --color-ecopet-rust: #8D3E27;
+  --color-ecopet-text: #1C2B20;
+  --color-ecopet-text-muted: #4F6354;
+  --color-ecopet-border: #D8D2BA;
 }
 
 :root {
   font-family: var(--font-sans);
+  background-color: #F5F0D6;
+  color: #1C2B20;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, .font-heading {
-  font-family: var(--font-heading);
-  letter-spacing: -0.02em;
+.font-serif-display {
+  font-family: 'DM Serif Display', Georgia, serif;
+  letter-spacing: -0.015em;
 }
 
-/* Custom subtle ambient glow */
-.glow-emerald {
-  box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.25);
+.font-serif-body {
+  font-family: 'Libre Baskerville', Georgia, serif;
 }
 
-.glow-card {
-  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.07);
+/* Subtle organic card shadow */
+.shadow-geometric {
+  box-shadow: 4px 4px 0px 0px rgba(33, 83, 50, 0.9);
+}
+
+.shadow-geometric-lg {
+  box-shadow: 6px 6px 0px 0px rgba(33, 83, 50, 0.95);
+}
+
+.shadow-geometric-soft {
+  box-shadow: 0 10px 25px -5px rgba(33, 83, 50, 0.08), 0 8px 10px -6px rgba(33, 83, 50, 0.04);
+}
+
+/* Archway classes */
+.rounded-arch-t {
+  border-top-left-radius: 9999px;
+  border-top-right-radius: 9999px;
+}
+
+.rounded-arch {
+  border-radius: 9999px;
 }
 
 /* Floating animation for pet */
-@keyframes subtle-float {
+@keyframes pet-gentle-float {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-8px) rotate(1deg);
+    transform: translateY(-6px) rotate(0.8deg);
   }
 }
 
-.animate-float {
-  animation: subtle-float 4.5s ease-in-out infinite;
+.animate-pet-float {
+  animation: pet-gentle-float 4s ease-in-out infinite;
 }
